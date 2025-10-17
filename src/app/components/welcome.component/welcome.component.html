@@ -1,0 +1,46 @@
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="intro">Hi I am</p>
+    <h1 class="name">{{ userInfo.name }}</h1>
+
+    <h2 class="role">{{ userInfo.title }}</h2>
+    <div class="social-media">
+      <a *ngFor="let account of socialAccounts"
+         [href]="account.link"
+         target="_blank">
+        <img
+          [src]="readIcon(account.icon)"
+          [alt]="account.icon"
+        />
+      </a>
+    </div>
+
+
+    <div class="hero-buttons">
+      <a
+         (click)="send()"
+         class="btn-primary">Hire Me</a>
+      <a href="{{userInfo.cv}}" class="btn-outline" download>Download CV</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>1+</h3>
+        <p>Experiences</p>
+      </div>
+      <div class="stat-box">
+        <h3>8+</h3>
+        <p>Project done</p>
+      </div>
+      <div class="stat-box">
+        <h3>80+</h3>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="solid-circle"></div>
+    <img [src]="readImage(userInfo.image)" alt="{{userInfo.name}}" />
+  </div>
+</section>

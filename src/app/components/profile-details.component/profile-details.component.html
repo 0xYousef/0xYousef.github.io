@@ -1,0 +1,29 @@
+<section class="about-section" id="about">
+  <h2 class="section-title">About Me</h2>
+<div class="about-left">
+  <img [src]="readImage(user.image)" alt="{{user.image}}" class="about-img" />
+</div>
+
+<div class="about-right">
+  <p>
+    Hello! I’m <strong>{{ user.name }}</strong>, a passionate software engineer specializing in backend, testing, and full-stack development.<br>
+    I enjoy designing scalable systems, building clean APIs, and developing automated testing frameworks that ensure performance and reliability.
+
+    I have experience working with technologies like <strong>Spring Boot, Java, and modern front-end frameworks</strong>, and I’m always exploring new ways to optimize workflows and improve code quality.
+
+    My focus is on delivering efficient, maintainable, and user-centered solutions.<br>
+    Beyond coding, I’m deeply interested in software architecture, CI/CD integration, and creating tools that empower developers and businesses alike.
+    I believe that great software combines <strong>innovation, precision, and purpose</strong>.
+
+  </p>
+
+  <div class="personal-info">
+
+    <div><strong>Email:</strong> {{ user.email }}</div>
+    <div><strong>Phone:</strong> {{ user.phone }}</div>
+    <div><strong>Address:</strong> {{ user.address }}</div>
+  </div>
+
+  <a href="{{user.cv}}" class="download-cv" download> Download CV</a>
+</div>
+</section>
