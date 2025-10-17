@@ -1,0 +1,21 @@
+<section class="skills" id="skills" >
+  <h2 class="section-subtitle">Skills</h2>
+
+  <div class="skills-container" >
+    <div class="skill" *ngFor="let skill of skills">
+      <img [src]="readIcon(skill.icon)" alt="{{skill.icon}}" class="skill-icon">
+      <div class="skill-name">{{skill.skill}}</div>
+      <div class="bar">
+        <div class="progress" [style.--progress.%]="skill.progress"></div>
+      </div>
+      <div class="percent">{{skill.progress}}%</div>
+    </div>
+
+  </div>
+  <!-- Infinite Icon Slider -->
+  <div class="skills-slider">
+    <div class="skills-track" *ngFor="let skill of skills">
+      <img [src]="readIcon(skill.icon)" alt="{{skill.icon}}" />
+    </div>
+  </div>
+</section>

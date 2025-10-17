@@ -5,7 +5,7 @@
 
   <div class="categories-grid">
     <div class="category-card">
-      <img src="../assets/images/project.jpg" alt="Projects">
+      <img [src]="readImage('project.jpg')" alt="project.jpg">
       <div class="category-overlay">
         <h3>Projects</h3>
         <p>Explore innovative projects built using modern technologies.</p>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="category-card">
-      <img src="../assets/images/articles.jpg" alt="Articles">
+      <img [src]="readImage('articles.jpg')" alt="articles.jpg">
       <div class="category-overlay">
         <h3>Articles</h3>
         <p>Read technical articles and blog posts written on development topics.</p>

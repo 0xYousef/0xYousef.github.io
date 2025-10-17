@@ -9,8 +9,8 @@ import {readIcon} from '../../../utils/read-assets.utils';
   imports: [
     NgForOf
   ],
-  templateUrl: './services-page.html',
-  styleUrl: './services-page.css'
+  templateUrl: './services.component.html',
+  styleUrl: './services.component.css'
 })
 export class ServicesComponent {
   services: Service[] = PersonalInfoRepository.prototype.getServices;

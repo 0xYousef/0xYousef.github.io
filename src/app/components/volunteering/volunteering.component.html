@@ -1,0 +1,57 @@
+<section class="volunteering" id="volunteering">
+  <h2 class="section-subtitle">Volunteering</h2>
+
+  <div
+    class="volunteering-item"
+    *ngFor="let one of volunteers"
+    (click)="showDetails(one)"
+  >
+    <div class="vol-btn">
+      <img [src]="'assets/images/' + one.image" alt="{{ one.company }}" />
+      <div>
+        <h3>{{ one.title }}</h3>
+        <p class="company">{{ one.company }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP DETAIL -->
+  <div class="popup" *ngIf="selectedVolunteer">
+    <div class="popup-content">
+      <button class="close-btn" (click)="closePopup()">×</button>
+
+      <div class="popup-header">
+        <img
+          [src]="readImage(selectedVolunteer.image)"
+          alt="{{ selectedVolunteer.company }}"
+        />
+        <div>
+          <h3>{{ selectedVolunteer.title }}</h3>
+          <p class="company">{{ selectedVolunteer.company }}</p>
+        </div>
+      </div>
+
+      <div class="popup-details">
+        <p>
+          <strong>Duration:</strong>
+          {{ selectedVolunteer.duration.start }} → {{ selectedVolunteer.duration.end }}
+        </p>
+      </div>
+
+      <div class="popup-description">
+        <p>{{ selectedVolunteer.description }}</p>
+      </div>
+
+      <div class="popup-description">
+        <p>{{ selectedVolunteer.description }}</p>
+
+        <div *ngIf="selectedVolunteer.skills?.length" class="skills">
+          <h4>Skills:</h4>
+          <ul>
+            <li *ngFor="let skill of selectedVolunteer.skills">{{ skill }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

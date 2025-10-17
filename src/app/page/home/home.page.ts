@@ -1,18 +1,18 @@
 import {Component} from '@angular/core';
-import {WelcomeComponent} from '../../components/welcome.component/welcome.component';
+import {WelcomeComponent} from '../../components/welcome/welcome.component';
 import {PersonalInfoRepository} from '../../../repository/personalInfo.repository';
 import {openMail} from '../../../utils/open_mail.util';
-import {ProfileDetailsComponent} from '../../components/profile-details.component/profile-details.component';
 import {
   Category_achievementsComponent
-} from '../../components/category-achievements.component/category_achievements.component';
+} from '../../components/category-achievements/category_achievements.component';
+import {ServicesPage} from '../services/services.page';
 
 @Component({
   selector: 'app-home-page',
   imports: [
     WelcomeComponent,
-    ProfileDetailsComponent,
-    Category_achievementsComponent
+    Category_achievementsComponent,
+    ServicesPage
   ],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css'

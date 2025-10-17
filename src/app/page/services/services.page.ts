@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ServicesComponent} from '../../components/services.component/services-page';
+import {ServicesComponent} from '../../components/services/services.component';
 
 @Component({
   selector: 'app-services-page',

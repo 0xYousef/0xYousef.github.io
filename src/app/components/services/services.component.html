@@ -6,11 +6,15 @@
 
   <div class="services-container">
     <div class="service-box" *ngFor="let service of services">
-      <img [src]="readIcon(service.image)" [alt]="service.image">
-      <i class="fas fa-laptop-code"></i>
-      <h3>{{ service.name }}</h3>
-      <p>{{service.description}}</p>
-    </div>
+      <div class="service-icon">
+        <img [src]="readIcon(service.image)" [alt]="service.image" />
+      </div>
 
+
+      <div class="service-content">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
   </div>
 </section>

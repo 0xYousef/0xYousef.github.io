@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {readImage} from '../../../utils/read-assets.utils';
 
 @Component({
   selector: 'app-category-achievements',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class Category_achievementsComponent {
 
+  protected readonly readImage = readImage;
 }
