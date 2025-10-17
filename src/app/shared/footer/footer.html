@@ -1,0 +1,37 @@
+<footer class="footer">
+  <div class="logo">PORTFOLIO</div>
+
+  <div>
+    <!-- 🟢 Social media section -->
+    <div class="social-media">
+      <a *ngFor="let account of socialAccounts"
+         [href]="account.link"
+         target="_blank">
+
+        <img
+          [src]="readIcon(account.icon)"
+          [alt]="account.icon"
+        />
+      </a>
+    </div>
+
+
+    <!-- 🟢 Contact info section -->
+    <div class="contact-info">
+      <p>
+        <img [src]="readIcon('email-icon.png')" alt="Email"/>
+        {{ userInfo.email }}
+      </p>
+      <p>
+        <img [src]="readIcon('phone-icon.png')" alt="Phone"/>
+        {{ userInfo.phone }}
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <p>
+      Developed by <strong>{{ userInfo.name }}</strong> | {{ userInfo.title }}
+    </p>
+  </div>
+</footer>

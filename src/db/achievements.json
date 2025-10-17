@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Angular",
+    "description": "A beginner-friendly guide to setting up and understanding the basics of Angular framework.",
+    "category": "Web Development",
+    "tags": ["Angular", "Frontend"],
+    "published": "2025-01-12",
+    "type": "Project"
+
+  },
+  {
+    "id": 2,
+    "title": "Understanding Spring Boot REST APIs",
+    "description": "An introduction to building scalable RESTful APIs using Spring Boot with practical examples.",
+    "category": "Backend Development",
+    "tags": ["Spring Boot", "Java"],
+    "published": "2025-03-05",
+    "type": "Article"
+  },
+  {
+    "id": 3,
+    "title": "Automating Tests with Cypress",
+    "description": "Learn how to create and run end-to-end tests efficiently using Cypress.",
+    "category": "Software Testing",
+    "tags": ["Cypress", "Automation"],
+    "published": "2025-05-18",
+    "type": "Project"
+
+  },
+  {
+    "id": 4,
+    "title": "Microservices Communication with Kafka",
+    "description": "Exploring how Apache Kafka can be used for reliable communication between microservices.",
+    "category": "System Design",
+    "tags": ["Kafka", "Microservices"],
+    "published": "2025-07-21",
+    "type": "Article"
+
+  },
+  {
+    "id": 5,
+    "title": "Building a Personal Portfolio with Angular",
+    "description": "Step-by-step guide to creating and deploying a dynamic portfolio website using Angular.",
+    "category": "Projects",
+    "tags": ["Portfolio", "Angular"],
+    "published": "2025-09-02",
+    "type": "Project"
+  }
+]

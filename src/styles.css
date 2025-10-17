@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+  top: 0;
+}
+.section-subtitle {
+  width: 100%;
+  text-align: center;
+  color: #ff9503;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+  top: 0;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f59d1a;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f59d1a;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #ffc75f;
+}
+
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.social-media img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 35px;
+  height: 35px;
+
+}
+
+.social-media img:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+}

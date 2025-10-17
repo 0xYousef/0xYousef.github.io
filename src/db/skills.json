@@ -1,0 +1,13 @@
+[
+  {"skill": "Java","icon": "Java.svg","progress": 98},
+  {"skill": "Spring Boot","icon": "spring.svg","progress": 80},
+
+  {"skill": "Postgres","icon": "PostgresSQL.svg","progress": 80},
+  {"skill": "Docker","icon": "Docker.svg","progress": 70},
+  {"skill": "Git","icon": "Git.svg","progress": 90},
+  {"skill": "MongoDB","icon": "MongoDB.svg","progress": 70},
+  {"skill": "Redis","icon": "Redis.svg","progress": 60},
+  {"skill": "Selenium","icon": "Selenium.svg","progress": 90},
+  {"skill": "Playwright","icon": "Playwright.svg","progress": 20},
+  {"skill": "Jira","icon": "Jira.svg","progress": 80}
+]
