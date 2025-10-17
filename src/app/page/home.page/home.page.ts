@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {WelcomeComponent} from '../../components/welcome.component/welcome.component';
 import {PersonalInfoRepository} from '../../../repository/personalInfo.repository';
 import {openMail} from '../../../utils/open_mail.util';
