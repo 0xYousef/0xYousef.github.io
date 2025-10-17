@@ -1,0 +1,16 @@
+<section class="services" id="services">
+  <h2 class="section-title">Services</h2>
+  <p class="services-subtitle">
+    Developing robust foundations, delivering polished experiences.
+  </p>
+
+  <div class="services-container">
+    <div class="service-box" *ngFor="let service of services">
+      <img [src]="readIcon(service.image)">
+      <i class="fas fa-laptop-code"></i>
+      <h3>{{ service.name }}</h3>
+      <p>{{service.description}}</p>
+    </div>
+
+  </div>
+</section>
