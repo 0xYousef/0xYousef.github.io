@@ -1,0 +1,142 @@
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.contact-title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  color: #ccc;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contact-form label {
+  width: 45%;
+  min-width: 250px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 18px 20px;
+  background-color: #1a1a1a;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #f59d1a;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #b57f25;
+}
+
+.contact-form select {
+  color: #b57f25;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23f59d1a' height='24' width='24' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #f59d1a;
+  box-shadow: 0 0 8px #f59d1a60;
+}
+
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+
+.form-action {
+  position: absolute;
+  bottom: 0;
+  right: 4%;
+  padding: 20px;
+}
+
+.form-action button {
+  background: transparent;
+  border: 2px solid #f59d1a;
+  color: #f59d1a;
+  padding: 12px 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-action button:hover {
+  background-color: #f59d1a;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f59d1a70;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 5%;
+  }
+
+  .contact-form label {
+    width: 100%;
+  }
+
+  .form-action {
+    position: static;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .form-action button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 30px;
+  }
+
+  .contact-subtitle {
+    font-size: 16px;
+  }
+}

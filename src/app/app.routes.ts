@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
-import {HomePagePage} from './page/home-page.page/home-page.page';
+import {HomePage} from './page/home.page/home.page';
+import {ContactMePage} from './page/contact-me/contact-me.page';
 
 export const routes: Routes = [
-  {path: '', component: HomePagePage},
+  {path: '', component: HomePage},
+  {path: 'contact-me', component: ContactMePage},
   {path: '==', redirectTo: ''},
 
 

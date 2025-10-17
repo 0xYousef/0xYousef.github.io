@@ -14,10 +14,10 @@ import {
     ProfileDetailsComponent,
     Category_achievementsComponent
   ],
-  templateUrl: './home-page.page.html',
-  styleUrl: './home-page.page.css'
+  templateUrl: './home.page.html',
+  styleUrl: './home.page.css'
 })
-export class HomePagePage {
+export class HomePage {
   userInfo= PersonalInfoRepository.prototype.getPersonalData;
   send(): void {
     openMail(this.userInfo.email)
