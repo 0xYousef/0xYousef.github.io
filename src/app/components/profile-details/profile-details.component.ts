@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {UserInfo} from '../../../models/profileinfo.model';
 import {PersonalInfoRepository} from '../../../repository/personalInfo.repository';
 import {readImage} from '../../../utils/read-assets.utils';
