@@ -1,0 +1,27 @@
+[
+    {
+        "name": "linkedin",
+        "link": "https://www.linkedin.com/in/yousef-muhamadd/",
+        "icon": "linkedin.png"
+    },
+    {
+        "name": "github",
+        "link": "https://github.com/Eagle0eye",
+        "icon": "github.png"
+    },
+    {
+        "name": "medium",
+        "link": "https://medium.com/@yousef.mohamed.12",
+        "icon": "medium.png"
+    },
+    {
+        "name": "discord",
+        "link": "https://discordapp.com/users/729308754314657803",
+        "icon": "discord.png"
+    },
+    {
+        "name": "youtube",
+        "link": "https://www.youtube.com/@yousef-salama-1",
+        "icon": "youtube.png"
+    }
+]
