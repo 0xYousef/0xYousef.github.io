@@ -1,0 +1,118 @@
+.contact-section {
+  background-color: #131313;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+position: relative;
+width: 100%;
+}
+
+.form-row {
+display: flex;
+justify-content: center;
+gap: 20px;
+width: 100%;
+flex-wrap: wrap;
+}
+
+.contact-form label {
+width: 45%;
+min-width: 250px;
+flex: 1;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+width: 100%;
+padding: 18px 20px;
+background-color: #1a1a1a;
+border: 1px solid transparent;
+border-radius: 10px;
+color: #f59d1a;
+font-size: 18px;
+outline: none;
+transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+color: #b57f25;
+}
+
+.contact-form select {
+color: #b57f25;
+appearance: none;
+background-image: url("data:image/svg+xml;utf8,<svg fill='%23f59d1a' height='24' width='24' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+background-repeat: no-repeat;
+background-position: right 15px center;
+background-size: 20px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+border-color: #f59d1a;
+box-shadow: 0 0 8px #f59d1a60;
+}
+
+.contact-form textarea {
+min-height: 150px;
+resize: none;
+}
+
+.form-action {
+align-self: flex-end;
+margin-top: 10px;
+margin-right: 4%;
+}
+
+.form-action button {
+background: transparent;
+border: 2px solid #f59d1a;
+color: #f59d1a;
+padding: 12px 40px;
+border-radius: 10px;
+font-size: 18px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+min-width: 150px;
+}
+
+.form-action button:hover {
+background-color: #f59d1a;
+color: #000;
+transform: scale(1.05);
+box-shadow: 0 0 15px #f59d1a70;
+}
+
+@media (max-width: 768px) {
+.contact-section {
+  padding: 20px;
+}
+
+.contact-form label {
+  width: 100%;
+  min-width: 100%;
+}
+
+.form-action {
+  align-self: center;
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-action button {
+  width: 100%;
+  max-width: 300px;
+}
+}

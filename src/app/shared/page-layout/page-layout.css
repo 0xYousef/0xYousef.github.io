@@ -1,0 +1,13 @@
+.page {
+  padding: 10px ;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+  .page {
+    padding: 10px 5%;
+  }
+}

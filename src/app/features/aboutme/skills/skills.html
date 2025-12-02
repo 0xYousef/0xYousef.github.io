@@ -1,0 +1,26 @@
+
+<div class="skills">
+<div class="skills-container" >
+    @for (skill of skills; track skill.title){
+    <div>
+    <img [src]="'assets/icons/'+skill.icon" alt="{{skill.icon}}" class="skill-icon">
+    <div class="skill-name">{{skill.title}}</div>
+    <div class="bar">
+        <div class="progress" [style.--progress.%]="skill.progress"></div>
+    </div>
+    <div class="percent">{{skill.progress}}%</div>
+    </div>
+    }
+
+</div>
+
+<div class="skills-slider">
+    <div class="skills-track" >
+    @if (skills.length>0) {
+        @for (skill of sliderIcons; track $index){
+        <img [src]="'assets/icons/'+skill.icon" alt="{{skill.icon}}"/>
+        }
+    }
+    </div>
+</div>
+</div>
