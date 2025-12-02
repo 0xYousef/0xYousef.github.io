@@ -8,10 +8,25 @@ html {
 }
 
 body {
-  background: #000;
+  background: #000000;
   color: #fff;
   font-family: 'Ubuntu', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f59d1a;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #ffc75f;
+}
+.section-content {
+    width: 100%;
+    padding: 10px 10%;
 }
