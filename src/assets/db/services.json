@@ -5,13 +5,13 @@
     "image": "ST-icon.png"
   },
   {
-    "name": "Software Testing Mobile",
-    "description": "Testing Android and iOS apps to ensure performance, usability, and stability across different devices and screen sizes.",
-    "image": "MT-icon.png"
-  },
-  {
     "name": "Backend Development",
     "description": "Building scalable RESTFUL APIs and microservices using Spring Boot, integrating databases, and applying clean architecture principles.",
     "image": "backend-icon.png"
+  },
+  {
+    "name": "Frontend Development",
+    "description": "Testing Android and iOS apps to ensure performance, usability, and stability across different devices and screen sizes.",
+    "image": "frontend.png"
   }
 ]

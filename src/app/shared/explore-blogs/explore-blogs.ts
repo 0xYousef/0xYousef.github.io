@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-explore-blogs',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './explore-blogs.css',
 })
 export class ExploreBlogs {
-
+  @Output() typeSelected = new EventEmitter<string>();
+  selectedType(type:string){
+    this.typeSelected.emit(type);
+  };
 }

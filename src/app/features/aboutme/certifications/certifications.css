@@ -1,0 +1,64 @@
+.certificates {
+  position: relative;
+  margin-top: 20px;
+}
+
+
+.certificate-row {
+    background-color: #111;
+    border-radius: 20px;
+    border: 1px solid #f59d1a30;
+    padding: 25px 30px;
+    display: flex;
+    text-align: left;
+    margin: 18px auto;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px #f59d1a30;
+    transition: all 0.3s ease;
+}
+
+.certificate-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #f59d1a70;
+}
+
+.certificate-info h3 {
+  color: #f59d1a;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.certificate-info p {
+  color: #ccc;
+  margin: 3px 0;
+}
+
+.view-btn {
+  background-color: #f59d1a;
+  color: #000;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+  background: transparent;
+  color: #f59d1a;
+  border: 2px solid #f59d1a;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+  .certificate-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .view-btn {
+    padding: 10px 30px;
+  }
+}

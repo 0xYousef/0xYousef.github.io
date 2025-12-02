@@ -1,1 +1,25 @@
-<p>explore-blogs works!</p>
+<section class="category-achievements">
+  <div class="categories-grid">
+
+    <div class="category-card" (click)="selectedType('project')">
+      <div class="category-bg">PROJECTS</div>
+      <div class="category-overlay">
+        <p>Discover innovative projects built with modern technologies.</p>
+      </div>
+    </div>
+
+    <div class="category-card" (click)="selectedType('article')">
+      <div class="category-bg">ARTICLES</div>
+      <div class="category-overlay">
+        <p>Read technical articles and blogs on development topics.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px;">
+    <button class="all-btn" (click)="selectedType('all')">
+      All Projects & Blogs
+    </button>
+  </div>
+</section>

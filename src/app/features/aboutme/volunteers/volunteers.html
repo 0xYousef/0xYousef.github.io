@@ -1,0 +1,59 @@
+<div class="Volunteers">
+@for (Volunteer of volunteers; track Volunteer)
+  {
+    <div class="volunteering-item" (click)="showDetails(Volunteer)">
+    <div class="vol-btn">
+      <img [src]="'assets/images/' + Volunteer.image" alt="{{ Volunteer.company }}" />
+      <div>
+        <h3>{{ Volunteer.title }}</h3>
+        <p class="company">{{ Volunteer.company }}</p>
+      </div>
+    </div>
+  </div>
+  }
+
+  @if (selectedVolunteer) {
+  <div class="popup">
+    <div class="popup-content">
+      <button class="close-btn" (click)="closePopup()" (cancel)="closePopup()">×</button>
+
+      <div class="popup-header">
+        <img
+          [src]="'assets/images/'+selectedVolunteer.image"
+          alt="{{ selectedVolunteer.company }}"
+        />
+        <div>
+          <h3>{{ selectedVolunteer.title }}</h3>
+          <p class="company">{{ selectedVolunteer.company }}</p>
+        </div>
+      </div>
+
+      <div class="popup-details">
+        <p>
+          <strong>Duration:</strong>
+          {{ selectedVolunteer.duration.start }} → {{ selectedVolunteer.duration.end }}
+        </p>
+      </div>
+
+      <div class="popup-description">
+        <p>{{ selectedVolunteer.description }}</p>
+      </div>
+
+      <div class="popup-description">
+        <p>{{ selectedVolunteer.description }}</p>
+        @if (selectedVolunteer.skills.length > 0) {
+          <div  class="skills">
+            <h4>Skills:</h4>
+            <ul>
+              @for (skill of selectedVolunteer.skills; track skill){
+                <li >{{ skill }}</li>
+              }
+            </ul>
+          </div>
+
+        }
+      </div>
+    </div>
+  </div>
+  }
+  </div>

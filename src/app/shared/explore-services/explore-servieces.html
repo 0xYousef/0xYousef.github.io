@@ -1,0 +1,16 @@
+<div>
+  <div class="services-container">
+    @for (service of services; track service.name) {
+      <div class="service-box">
+        <div class="service-icon">
+          <img [src]="'assets/icons/'+service.image" [alt]="service.image" />
+        </div>
+
+        <div class="service-content">
+          <h3>{{ service.name }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</div>

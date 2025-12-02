@@ -1,1 +1,14 @@
-<p>section-layout works!</p>
+<section class="section">
+  @if (title) {
+    <h2 class="section-title">{{ title }}</h2>
+    }
+  @if (subtitle) {
+    <h3 class="section-subtitle">{{ subtitle }}</h3>
+  }
+  @if (description) {
+    <p class="section-description">{{ description }}</p>
+  }
+  <div class="section-body">
+  <ng-content></ng-content>
+  </div>
+</section>

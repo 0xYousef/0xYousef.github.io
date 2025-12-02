@@ -1,1 +1,29 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="logo">PORTFOLIO</div>
+
+  <div>
+    <div class="social-media">
+      @for (account of accounts; track account) {
+        <app-accounts [account]="account">
+        </app-accounts>
+      }
+    </div>
+
+    <div class="contact-info">
+      <p>
+        <img [src]="'assets/icons/email.png'" alt="Email"/>
+        {{ userInfo.email }}
+      </p>
+      <p>
+        <img [src]="'assets/icons/phone.png'" alt="Phone"/>
+        {{ userInfo.phone }}
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <p>
+      Product by <strong> Yousef Mohamed </strong> | Software Engineer
+    </p>
+  </div>
+</footer>
