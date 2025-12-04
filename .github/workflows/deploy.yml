@@ -23,18 +23,25 @@ jobs:
           node-version: '22.x'
           cache: 'npm'
 
-      - name: Clean install dependencies
+      - name: Install dependencies
         run: |
-          rm -rf node_modules
-          npm ci --legacy-peer-deps
+          npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 
-      - name: Verify @emailjs/browser installation
+      - name: Install @emailjs/browser if missing
         run: |
           if [ ! -d "node_modules/@emailjs/browser" ]; then
-            echo "Error: @emailjs/browser not found in node_modules"
-            exit 1
+            echo "Installing @emailjs/browser explicitly..."
+            npm install @emailjs/browser@^4.4.1 --save --legacy-peer-deps
+          else
+            echo "✓ @emailjs/browser already installed"
           fi
-          echo "@emailjs/browser found successfully"
+
+      - name: List installed packages (debug)
+        run: |
+          echo "Checking node_modules/@emailjs:"
+          ls -la node_modules/@emailjs/ 2>/dev/null || echo "No @emailjs directory found"
+          echo "Checking for @emailjs/browser:"
+          test -d "node_modules/@emailjs/browser" && echo "✓ Found" || echo "✗ Not found"
 
       - name: Build Angular app
         run: npx ng build --configuration=production
