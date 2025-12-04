@@ -23,8 +23,18 @@ jobs:
           node-version: '22.x'
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          npm ci --legacy-peer-deps
+
+      - name: Verify @emailjs/browser installation
+        run: |
+          if [ ! -d "node_modules/@emailjs/browser" ]; then
+            echo "Error: @emailjs/browser not found in node_modules"
+            exit 1
+          fi
+          echo "@emailjs/browser found successfully"
 
       - name: Build Angular app
         run: npx ng build --configuration=production
