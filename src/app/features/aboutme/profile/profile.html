@@ -14,13 +14,7 @@
     </div>
 
     <div class="about-actions">
-        <div class="social-icons">
-
-            @for (account of accounts; track account) {
-                <app-accounts [account]="account"></app-accounts>
-            }
-            
-        </div>
+        <app-accounts [accounts]="accounts"></app-accounts>
         <a [href]="user.cv" target="_blank" class="download-cv" download>Download CV</a>
     </div>
     </div>

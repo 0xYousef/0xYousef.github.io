@@ -1,11 +1,11 @@
-<div>
-     <a
-        [href]="account.link"
-        target="_blank">
-
-        <img
+<div class="social-icons">
+  @for (account of accounts; track account) {
+    <a [href]="account.link" target="_blank">
+      <img
+        class="social-icon-img" 
         [src]="readIcon(account.icon)"
         [alt]="account.name"
-        />
-      </a>
+      />
+    </a>
+  }
 </div>

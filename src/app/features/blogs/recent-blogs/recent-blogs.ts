@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BlogMeta } from '../../../models/blog.model';
-import { Cards } from "../cards/cards";
+import { Cards } from "../../../shared/cards/cards";
 import BLOGS_DATA from '../../../../assets/db/blogs.json';
 
 import { FormsModule } from '@angular/forms';

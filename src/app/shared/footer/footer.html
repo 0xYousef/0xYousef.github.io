@@ -1,13 +1,6 @@
 <footer class="footer">
-  <div class="logo">PORTFOLIO</div>
-
   <div>
-    <div class="social-media">
-      @for (account of accounts; track account) {
-        <app-accounts [account]="account">
-        </app-accounts>
-      }
-    </div>
+    <app-accounts [accounts]="accounts"/>
 
     <div class="contact-info">
       <p>

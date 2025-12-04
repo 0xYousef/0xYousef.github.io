@@ -134,10 +134,10 @@
 }
 .social-media {
   display: flex;
-  justify-content: flex-start; /* align icons with text (left side) */
+  justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  margin: 20px 0 30px; /* space above & below icons */
+  margin: 20px 0 30px; 
 }
 
 .hero-content .social-media img {

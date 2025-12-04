@@ -4,7 +4,7 @@ import { Aboutme } from './features/aboutme/aboutme';
 import { Services } from './features/services/services';
 import { Blogs } from './features/blogs/blogs';
 import { CategoryBlogs } from './features/blogs/category-blogs/category-blogs';
-import { Blog } from './features/blogs/blog/blog';
+import { Blog } from './features/blog/blog';
 import { Contactme } from './features/contactme/contactme';
 
 export const routes: Routes = [

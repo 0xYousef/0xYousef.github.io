@@ -1,20 +1,53 @@
-.achievements-list-page {
+.blog-list-page {
   background-color: #0a0a0a;
   color: #fff;
   padding: 60px 8%;
-  flex-wrap: wrap;
-  flex-flow: column;
-  
-}
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.achievement-card {
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+  align-items: start;
+}
+
+@media (min-width: 1200px) {
+  .blog-grid {
+    grid-template-columns: repeat(4, minmax(280px, 320px));
+  }
+}
+
+.blog-grid > * {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-card {
   background: #1c1c1c;
   border-radius: 18px;
   overflow: hidden;
@@ -24,29 +57,29 @@
   box-shadow: 0 0 0 transparent;
 }
 
-.achievement-card:hover {
+.blog-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(245, 157, 26, 0.35);
 }
 
-.achievement-image-container {
+.blog-image-container {
   position: relative;
   overflow: hidden;
   border-bottom: 2px solid #f59d1a;
 }
 
-.achievement-image {
+.blog-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.achievement-image-container:hover img {
+.blog-image-container:hover img {
   transform: scale(1.05);
 }
 
-.achievement-overlay {
+.blog-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,35 +97,35 @@
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.achievement-image-container:hover .achievement-overlay {
+.blog-image-container:hover .blog-overlay {
   opacity: 1;
   transform: translateY(0);
   background: rgba(21, 21, 21, 0.57);
 }
 
-.achievement-content {
+.blog-content {
   padding: 20px;
 }
 
-.achievement-title {
+.blog-title {
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 8px;
   line-height: 1.4;
 }
 
-.achievement-field {
+.blog-field {
   color: #f59d1a;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
-.achievement-date {
+.blog-date {
   color: #aaa;
   font-size: 0.9rem;
 }
 
-.achievement-tags {
+.blog-tags {
   display: flex;
   flex-wrap: nowrap;
   padding-top: 20px;
@@ -123,23 +156,4 @@
   text-align: center;
   grid-column: 1 / -1;
   font-size: 1.1rem;
-}
-
-@media (max-width: 768px) {
-  .achievement-image {
-    height: 160px;
-  }
-
-  .achievement-title {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-
-  .achievements-grid {
-    gap: 25px;
-    padding: 10px 10%;
-  }
 }

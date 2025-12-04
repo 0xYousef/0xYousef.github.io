@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Social, UserInfo } from '../../../models/profileinfo.model';
 import { Accounts } from '../../../shared/accounts/accounts';
-import ACCOUNTS_DATA from '../../../../assets/db/accounts.json';
-import PERSONAL_DATA from '../../../../assets/db/personal_data.json';
+import { MetaService } from '../../../services/meta.service';
 
 @Component({
   selector: 'app-profile',
@@ -13,16 +12,16 @@ import PERSONAL_DATA from '../../../../assets/db/personal_data.json';
 })
 export class Profile implements OnInit {
 
-  user !: UserInfo;
 
+  constructor(meta:MetaService){
+}
+  private meta = inject(MetaService)
+  user !: UserInfo
   accounts !: Social[];
-  ngOnInit(): void {
-    this.user = PERSONAL_DATA as UserInfo;
-    this.accounts = ACCOUNTS_DATA as Social[];
-    this.accounts.forEach(account => {
-      console.log(account);
-    });
 
+  ngOnInit(): void {
+    this.user = this.meta.personalInformation;
+    this.accounts = this.meta.accounts;
   }
 
 

@@ -1,3 +1,7 @@
+export interface Blog{
+  meta: BlogMeta;
+  content: Content;
+}
 export interface BlogMeta {
   id: number;
   title: string;
@@ -12,7 +16,6 @@ export interface BlogMeta {
   last_modified: string;
 }
 export interface Content {
-  title: string;
   content: Section[];
 }
 

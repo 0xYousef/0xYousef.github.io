@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { PageLayout } from "../../shared/page-layout/page-layout";
 import { SectionLayout } from "../../shared/section-layout/section-layout";
 import { ExploreServieces } from "../../shared/explore-services/explore-servieces";
 import { Service } from '../../models/profileinfo.model';
-import SERVICES_DATA from '../../../assets/db/services.json';
+import { MetaService } from '../../services/meta.service';
 
 @Component({
   selector: 'app-services',
@@ -11,9 +11,11 @@ import SERVICES_DATA from '../../../assets/db/services.json';
   templateUrl: './services.html',
   styleUrl: './services.css',
 })
-export class Services implements OnInit {
-  services !: Service[];
+export class Services  implements OnInit{
+  services !: Service[]
+  private meta : MetaService = inject(MetaService)
+  
   ngOnInit(): void {
-    this.services = SERVICES_DATA as Service[];
+    this.services = this.meta.services
   }
 }

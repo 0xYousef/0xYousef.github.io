@@ -9,5 +9,4 @@ import { Service } from '../../models/profileinfo.model';
 })
 export class ExploreServieces {
   @Input({required:true}) services !: Service[];
-
 }

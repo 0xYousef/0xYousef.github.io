@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Experience } from "../../../models/aboutme.model";
 import { NgFor, NgIf, } from '@angular/common';
 @Component({
@@ -9,37 +9,7 @@ import { NgFor, NgIf, } from '@angular/common';
   styleUrl: './experience.css',
 })
 export class Experiences {
-  experiences : Experience[] = [
-  {
-    "title": "Internship",
-    "company": {"name": "AZM Squad","link": "https://www.linkedin.com/company/azmsquad/"},
-    "description": "Selected for a competitive 10-week intensive training program focused on practical, hands-on learning. Participated in daily mentorship sessions, advanced technical assessments, and a capstone graduation project to enhance real-world software Testing skills.",
-    "field": "SOFTWARE TESTING",
-    "image": "azm-logo.jpeg",
-    "duration": {
-      "start": "2023-02",
-      "end": "2023-05"
-    },
-    "location": "Remote",
-    "locationType": "Remote",
-    "employmentType": "Internship"
-  },
-  {
-    "title": "Software Quality Assurance Engineer",
-    "company": {"name": "Holouly (Problem, Solved.)", "link": "https://www.linkedin.com/company/holouly-it/"},
-    "description": "Ensured software quality through comprehensive testing strategies including manual and automated testing. Developed test cases, performed regression testing, and collaborated with development teams to identify and resolve defects, ensuring reliable and high-performing applications.",
-    "field": "SOFTWARE TESTING",
-    "image": "holouly-logo.jpg",
-    "duration": {
-      "start": "2023-06",
-      "end": "2023-10"
-    },
-    "location": "New Cairo",
-    "locationType": "Hybrid",
-    "employmentType": "Full-time"
-  }
-]
-;
+  @Input({required:true}) experiences!: Experience[];
   selectedExperience: Experience | null = null;
   showDetails(experience: Experience): void {
     this.selectedExperience = experience;

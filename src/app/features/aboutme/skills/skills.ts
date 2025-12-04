@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Skill } from '../../../models/aboutme.model';
 
 @Component({
@@ -9,20 +9,9 @@ import { Skill } from '../../../models/aboutme.model';
   styleUrl: './skills.css',
 })
 export class Skills {
-  skills : Skill[] = [
-  {"title": "Java","icon": "Java.svg","progress": 98},
-  {"title": "Spring Boot","icon": "spring.svg","progress": 80},
+  @Input({required:true}) skills!: Skill[];
 
-  {"title": "Postgres","icon": "PostgresSQL.svg","progress": 80},
-  {"title": "Docker","icon": "Docker.svg","progress": 70},
-  {"title": "Git","icon": "Git.svg","progress": 90},
-  {"title": "MongoDB","icon": "MongoDB.svg","progress": 70},
-  {"title": "Redis","icon": "Redis.svg","progress": 60},
-  {"title": "Selenium","icon": "Selenium.svg","progress": 90},
-  {"title": "Playwright","icon": "Playwright.svg","progress": 20},
-  {"title": "Jira","icon": "Jira.svg","progress": 80}
-];
-  sliderIcons : Skill[] = this.skills.concat(this.skills);
-
-
+  get sliderIcons(): Skill[] {
+    return this.skills ? this.skills.concat(this.skills) : [];
+  }
 }

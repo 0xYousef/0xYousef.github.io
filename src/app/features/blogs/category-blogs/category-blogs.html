@@ -1,11 +1,37 @@
 <app-page-layout>
-  <app-section-layout  subtitle="Blogs"  >
-    <div class="content-section">
-      <div class="achievements-list-page" >
-        <div class="achievements-grid">
-          @if (blogs.length > 0) {
-            @for (blog of blogs; track blog.id) {
-              <app-cards [bolg]="blog" />
+  <app-section-layout subtitle="Blogs">
+    <div class="section-content">
+      <div class="blog-controls">
+        <div class="search-container">
+            <input
+                type="text"
+                class="search-input"
+                placeholder="Search blog..."
+                aria-label="Search blog"
+                [(ngModel)]="searchTerm"
+                (input)="filterBlogs()"
+            >
+        </div>
+
+        <div class="filter-dropdown">
+            <select
+                class="filter-select"
+                [(ngModel)]="activeFilter"
+                (change)="filterBlogs()"
+                aria-label="Filter by category"
+            >
+                @for (cat of filters; track $index) {
+                    <option [value]="cat">{{ cat }}</option>
+                }
+            </select>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+    </div>
+      <div class="blog-list-page">
+        <div class="blog-grid">
+          @if (filteredBlogs.length > 0) {
+            @for (blog of filteredBlogs; track blog.id) {
+              <app-cards [blog]="blog" />
             }
           } @else {
             <div class="no-blogs">
@@ -13,8 +39,8 @@
             </div>
           }
         </div>
+        
       </div>
     </div>
   </app-section-layout>
-
 </app-page-layout>

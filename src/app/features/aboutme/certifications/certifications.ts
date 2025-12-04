@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Certification } from "../../../models/aboutme.model";
 @Component({
   selector: 'app-certifications',
@@ -8,5 +8,5 @@ import { Certification } from "../../../models/aboutme.model";
   styleUrl: './certifications.css',
 })
 export class Certifications {
-  certifications !: Certification[];
+  @Input({required:true}) certifications !: Certification[];
 }

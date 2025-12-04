@@ -1,0 +1,35 @@
+<div>
+  @if (education) {
+    <div class="education-container">
+      <div class="education-left">
+        <img
+          [src]="readImage(education.image)"
+          alt="{{ education.image }}"
+          class="education-img"
+        />
+      </div>
+
+      <div class="education-right">
+        <h3 class="edu-title">{{ education.university }}</h3>
+        <p class="edu-degree">{{ education.degree }}</p>
+        <p class="edu-faculty">Faculty of {{ education.faculty }}</p>
+
+        <p class="edu-description">{{ education.description }}</p>
+
+        <div class="edu-skills">
+          <strong>Skills:</strong>
+          <ul class="skills-list">
+            @for (skill of education.skills; track skill.toLowerCase()) {
+              <li class="skill-item">{{ skill }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="edu-duration">
+          <strong>Duration:</strong>
+          {{ education.duration.start }} - {{ education.duration.end }}
+        </div>
+      </div>
+    </div>
+  }
+</div>

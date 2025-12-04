@@ -1,0 +1,26 @@
+<div class="blog-card" >
+  <div class="blog-image-container" (click)="goToBlogDetail()">
+    <img
+      class="blog-image"
+      [src]="'assets/images/'+blog.image"
+      [alt]="blog.title"
+    />
+    <div class="blog-overlay"><span>View</span></div>
+  </div>
+
+  <div class="blog-content">
+    <h3 class="blog-title">{{ blog.title }}</h3>
+    <p class="blog-field">{{ blog.field }}</p>
+
+    <div class="blog-tags">
+      @for (tag of displayedTags; track tag) {
+        <span class="tag">{{ tag }}</span>
+      }
+      @if (extraTagsCount > 0) {
+        <span class="tag extra-tag">+{{ extraTagsCount }}</span>
+      }
+    </div>
+
+    <span class="blog-date">Last Updated: {{ blog.last_modified }}</span>
+  </div>
+</div>

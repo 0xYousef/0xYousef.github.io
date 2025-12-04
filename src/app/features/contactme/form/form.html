@@ -1,40 +1,50 @@
-
 <div class="contact-section">
-<form class="contact-form">
+  <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+    <!-- Name & Email -->
     <div class="form-row">
       <label>
-        <input type="text" placeholder="full name" />
+        <input type="text" formControlName="name" placeholder="Full Name *" />
       </label>
       <label>
-        <input type="email" placeholder="email" />
+        <input type="email" formControlName="email" placeholder="Email *" />
       </label>
     </div>
 
+    <!-- Subject & Service -->
     <div class="form-row">
       <label>
-        <input type="text" placeholder="phone number" />
+        <input type="text" formControlName="subject" placeholder="Subject *" />
       </label>
       <label>
-        <select>
-          <option value="">service</option>
-          <option value="web">Web Development</option>
-          <option value="testing">Software Testing</option>
-          <option value="ui/ux">UI/UX Design</option>
+        <select formControlName="service">
+          <option value="">Service *</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Software Testing">Software Testing</option>
+          <option value="UI/UX Design">UI/UX Design</option>
         </select>
       </label>
     </div>
 
+    <!-- Message -->
     <div class="form-row">
       <label>
-        <input type="text" placeholder="subject" />
-      </label>
-      <label>
-        <textarea placeholder="details......"></textarea>
+        <textarea formControlName="message" placeholder="Message *"></textarea>
       </label>
     </div>
 
+    <!-- Submit Button -->
     <div class="form-action">
-      <button type="submit">Send</button>
+      <button type="submit" [disabled]="sending">
+        {{ sending ? 'Sending...' : 'Send' }}
+      </button>
     </div>
   </form>
+
+  <!-- Dialog Overlay -->
+  <div *ngIf="showDialog" class="dialog-overlay">
+    <div class="dialog-box">
+      <p>{{ dialogMessage }}</p>
+      <button type="button" (click)="closeDialog()">OK</button>
+    </div>
+  </div>
 </div>

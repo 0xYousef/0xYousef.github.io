@@ -10,6 +10,6 @@ import { readIcon } from '../../utils/read-assets.util';
   styleUrl: './accounts.css',
 })
 export class Accounts {
-  @Input({required:true}) account !: Social;
+  @Input({required:true}) accounts !: Social[];
   protected readonly readIcon = readIcon;
 }
